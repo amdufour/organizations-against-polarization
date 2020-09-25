@@ -1626,3 +1626,104 @@ button {
   -webkit-transition-timing-function: cubic-bezier(0.12, 0, 0.39, 0);
           transition-timing-function: cubic-bezier(0.12, 0, 0.39, 0);
 }
+
+/* line 1, src/sass/components/_footer.scss */
+footer {
+  margin-top: 200px;
+  padding: 100px 0 20px;
+  background: #1F2933;
+  color: #FBFDFE;
+}
+
+/* line 8, src/sass/components/_footer.scss */
+footer .footer-content h2 {
+  margin-bottom: 40px;
+}
+
+/* line 11, src/sass/components/_footer.scss */
+footer .footer-content p {
+  max-width: 189px;
+  margin: 20px 0;
+}
+
+/* line 15, src/sass/components/_footer.scss */
+footer .footer-content .btn {
+  display: inline-block;
+  margin-top: 40px;
+  margin-right: 30px;
+  padding: 1rem 1.5rem;
+  color: #FBFDFE;
+  background: transparent;
+  border: 1px solid #FBFDFE;
+  border-radius: 3px;
+}
+
+/* line 24, src/sass/components/_footer.scss */
+footer .footer-content .btn:hover, footer .footer-content .btn:focus {
+  color: #1F2933;
+  background: #FBFDFE;
+}
+
+/* line 31, src/sass/components/_footer.scss */
+footer .footer-bottom {
+  margin-top: 100px;
+}
+
+/* line 33, src/sass/components/_footer.scss */
+footer .footer-bottom .copyright {
+  font-size: 1.3rem;
+}
+
+/* line 1, src/sass/components/_social-links.scss */
+.social-links {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  text-align: right;
+}
+
+/* line 6, src/sass/components/_social-links.scss */
+.social-links li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+/* line 9, src/sass/components/_social-links.scss */
+.social-links li:first-of-type {
+  margin-left: 0;
+}
+
+/* line 12, src/sass/components/_social-links.scss */
+.social-links li a {
+  border-bottom: none;
+}
+
+/* line 14, src/sass/components/_social-links.scss */
+.social-links li a .logo-instagram g,
+.social-links li a .logo-behance g,
+.social-links li a .logo-linkedin path {
+  -webkit-transition-property: fill;
+  transition-property: fill;
+  -webkit-transition-duration: 100ms;
+          transition-duration: 100ms;
+  -webkit-transition-timing-function: cubic-bezier(0.12, 0, 0.39, 0);
+          transition-timing-function: cubic-bezier(0.12, 0, 0.39, 0);
+}
+
+/* line 20, src/sass/components/_social-links.scss */
+.social-links li a:before {
+  display: none;
+}
+
+/* line 24, src/sass/components/_social-links.scss */
+.social-links li a:hover .logo-instagram g,
+.social-links li a:hover .logo-behance g,
+.social-links li a:hover .logo-linkedin path, .social-links li a:focus .logo-instagram g,
+.social-links li a:focus .logo-behance g,
+.social-links li a:focus .logo-linkedin path {
+  fill: #90BE6D;
+  -webkit-transition-duration: 150ms;
+          transition-duration: 150ms;
+  -webkit-transition-timing-function: cubic-bezier(0.61, 1, 0.88, 1);
+          transition-timing-function: cubic-bezier(0.61, 1, 0.88, 1);
+}
