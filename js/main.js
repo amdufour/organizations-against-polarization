@@ -73,3 +73,12 @@ d3.selectAll('g.node')
 
 // Append legend
 addRadiusLegend(getRadius(1000000), getRadius(500000), getRadius(5000));
+
+
+/*************************************/
+/* Update Copyright years            */
+/*************************************/
+const creationYear = 2020;
+const currentYear = new Date().getFullYear();
+const copyrightYears = currentYear === creationYear ? currentYear : `${creationYear}-${currentYear}`;
+document.querySelector('.copyright-years').innerHTML = copyrightYears;
