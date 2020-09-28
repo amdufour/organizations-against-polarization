@@ -1753,36 +1753,53 @@ footer .footer-content .btn:hover, footer .footer-content .btn:focus {
 
 /* line 33, src/sass/components/_footer.scss */
 footer .footer-bottom {
-  margin-top: 100px;
+  margin-top: 150px;
 }
 
 /* line 35, src/sass/components/_footer.scss */
 footer .footer-bottom .icons,
 footer .footer-bottom .copyright {
   font-size: 1.3rem;
+  line-height: 1.2;
 }
 
-/* line 40, src/sass/components/_footer.scss */
+/* line 41, src/sass/components/_footer.scss */
 footer .footer-bottom .icons a {
   color: #FBFDFE;
   border-bottom: 1px solid #FBFDFE;
 }
 
-/* line 43, src/sass/components/_footer.scss */
+/* line 44, src/sass/components/_footer.scss */
 footer .footer-bottom .icons a:hover, footer .footer-bottom .icons a:focus {
   color: #90BE6D;
   border-bottom: 1px solid #90BE6D;
 }
 
-/* line 49, src/sass/components/_footer.scss */
+@media (max-width: 768px) {
+  /* line 40, src/sass/components/_footer.scss */
+  footer .footer-bottom .icons {
+    margin-bottom: 8px;
+    margin-left: 2px;
+  }
+  /* line 52, src/sass/components/_footer.scss */
+  footer .footer-bottom .icons a {
+    border-bottom: none;
+    text-decoration: underline;
+  }
+  /* line 55, src/sass/components/_footer.scss */
+  footer .footer-bottom .icons a:hover, footer .footer-bottom .icons a:focus {
+    border-bottom: none;
+  }
+}
+
+/* line 61, src/sass/components/_footer.scss */
 footer .footer-bottom .copyright {
   text-align: right;
 }
 
 @media (max-width: 768px) {
-  /* line 49, src/sass/components/_footer.scss */
+  /* line 61, src/sass/components/_footer.scss */
   footer .footer-bottom .copyright {
-    margin-top: 100px;
     text-align: left;
   }
 }
