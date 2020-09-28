@@ -66,9 +66,10 @@ d3.selectAll('g.node')
         hideInfo();
       })
       .on('click', d => {
-        isActiveElement = true;
-        highlightElements(d.id, true);
-        addBackgroundCircle(d.id, getRadius(d.estimated_people_impacted));
+        handleClick(d);
+      })
+      .on('touchend', d => {
+        handleClick(d);
       });
 
 // Append legend

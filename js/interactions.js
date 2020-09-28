@@ -188,6 +188,10 @@ document.addEventListener('click', (e) => {
     highlightedNodes = [];
     unhighlightElements();
     d3.select('#action').classed('visible', false);
+
+    if (d3.select('#info').classed('visible', true)) {
+      hideInfo();
+    }
   }
 });
 
@@ -240,3 +244,21 @@ const hideInfo = () => {
       .classed('hidden', false);
   }
 };
+
+/**********************************************/
+/* Populate and show/hide info box            */
+/**********************************************/
+const handleClick = (d) => {
+  isActiveElement = true;
+  highlightElements(d.id, true);
+  addBackgroundCircle(d.id, getRadius(d.estimated_people_impacted));
+  if (window.innerWidth <= 768) {
+    showInfo(d);
+  }
+}
+
+
+/**********************************************/
+/* Pan and Zoom svg                           */
+/**********************************************/
+svgPanZoom('#network');

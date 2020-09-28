@@ -1234,7 +1234,8 @@ button {
 
 /* line 1, src/sass/components/_action.scss */
 #action {
-  min-height: 45px;
+  margin: 40px 0 10px;
+  min-height: 50px;
   font-size: 1.6rem;
   text-align: center;
   opacity: 0;
@@ -1246,7 +1247,7 @@ button {
           transition-timing-function: cubic-bezier(0.61, 1, 0.88, 1);
 }
 
-/* line 8, src/sass/components/_action.scss */
+/* line 9, src/sass/components/_action.scss */
 #action.visible {
   opacity: 1;
   -webkit-transition-duration: 100ms;
@@ -1255,13 +1256,46 @@ button {
           transition-timing-function: cubic-bezier(0.12, 0, 0.39, 0);
 }
 
-/* line 13, src/sass/components/_action.scss */
+/* line 14, src/sass/components/_action.scss */
 #action .action-field {
   display: block;
   margin-top: 3px;
   font-family: "Lora", serif;
   font-size: 1.8rem;
   font-weight: 500;
+}
+
+/* line 23, src/sass/components/_action.scss */
+.action-description {
+  padding: 20px 20px 20px 52px;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  background-color: #ebf5fa;
+  background-image: url(../svg/lamp.svg);
+  background-repeat: no-repeat;
+  background-position: 15px 13px;
+  background-size: auto 30px;
+  border-radius: 3px;
+}
+
+@media (max-width: 768px) {
+  /* line 33, src/sass/components/_action.scss */
+  .action-description.desktop {
+    display: none;
+  }
+}
+
+/* line 38, src/sass/components/_action.scss */
+.action-description.mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* line 38, src/sass/components/_action.scss */
+  .action-description.mobile {
+    display: block;
+    background-position: 15px 11px;
+  }
 }
 
 /* line 2, src/sass/components/_info.scss */
@@ -1293,7 +1327,7 @@ button {
     z-index: -1;
     width: 100vw;
     max-height: 250px;
-    padding: 20px 30px;
+    padding: 20px 30px 60px;
     background: -webkit-gradient(linear, left bottom, left top, from(#fbfdfe), color-stop(50%, #fbfdfe), to(rgba(251, 253, 254, 0.7)));
     background: linear-gradient(0deg, #fbfdfe 0%, #fbfdfe 50%, rgba(251, 253, 254, 0.7) 100%);
     -webkit-box-shadow: 0 2px 4px rgba(31, 41, 51, 0.7);
@@ -1624,6 +1658,40 @@ button {
   opacity: 1;
 }
 
+/* line 15, src/sass/components/_nodes.scss */
+#network {
+  height: 815px;
+  background-color: #ebf5fa;
+}
+
+@media (max-width: 1200px) {
+  /* line 15, src/sass/components/_nodes.scss */
+  #network {
+    height: 665px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* line 15, src/sass/components/_nodes.scss */
+  #network {
+    height: 504px;
+  }
+}
+
+@media (max-width: 576px) {
+  /* line 15, src/sass/components/_nodes.scss */
+  #network {
+    height: 562px;
+  }
+}
+
+@media (max-width: 375px) {
+  /* line 15, src/sass/components/_nodes.scss */
+  #network {
+    height: 408px;
+  }
+}
+
 /* line 1, src/sass/components/_references.scss */
 .notes-section {
   opacity: 1;
@@ -1654,7 +1722,7 @@ footer {
 
 /* line 8, src/sass/components/_footer.scss */
 footer .footer-content h2 {
-  margin-bottom: 40px;
+  margin-bottom: 52px;
 }
 
 /* line 11, src/sass/components/_footer.scss */
@@ -1667,7 +1735,7 @@ footer .footer-content p {
 footer .footer-content .btn {
   display: inline-block;
   width: 120px;
-  margin-top: 20px;
+  margin-top: 40px;
   margin-right: 20px;
   padding: 1rem 1.5rem;
   color: #FBFDFE;
@@ -1689,13 +1757,30 @@ footer .footer-bottom {
 }
 
 /* line 35, src/sass/components/_footer.scss */
+footer .footer-bottom .icons,
 footer .footer-bottom .copyright {
   font-size: 1.3rem;
+}
+
+/* line 40, src/sass/components/_footer.scss */
+footer .footer-bottom .icons a {
+  color: #FBFDFE;
+  border-bottom: 1px solid #FBFDFE;
+}
+
+/* line 43, src/sass/components/_footer.scss */
+footer .footer-bottom .icons a:hover, footer .footer-bottom .icons a:focus {
+  color: #90BE6D;
+  border-bottom: 1px solid #90BE6D;
+}
+
+/* line 49, src/sass/components/_footer.scss */
+footer .footer-bottom .copyright {
   text-align: right;
 }
 
 @media (max-width: 768px) {
-  /* line 35, src/sass/components/_footer.scss */
+  /* line 49, src/sass/components/_footer.scss */
   footer .footer-bottom .copyright {
     margin-top: 100px;
     text-align: left;
@@ -1704,7 +1789,7 @@ footer .footer-bottom .copyright {
 
 /* line 1, src/sass/components/_social-links.scss */
 .social-links {
-  margin: 0;
+  margin: 65px 0 0;
   padding-left: 0;
   list-style: none;
 }
