@@ -67,6 +67,9 @@ d3.selectAll('g.node')
       })
       .on('click', d => {
         handleClick(d);
+      })
+      .on('touchend', d => {
+        handleClick(d);
       });
 
 // Append legend
