@@ -1661,7 +1661,8 @@ button {
 /* line 15, src/sass/components/_nodes.scss */
 #network {
   height: 815px;
-  background-color: #ebf5fa;
+  border: 1px solid #e7f3f9;
+  border-radius: 3px;
 }
 
 @media (max-width: 1200px) {
