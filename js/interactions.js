@@ -261,6 +261,4 @@ const handleClick = (d) => {
 /**********************************************/
 /* Pan and Zoom svg                           */
 /**********************************************/
-svgPanZoom('#network', {
-  dblClickZoomEnabled: false
-});
+svgPanZoom('#network');
