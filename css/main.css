@@ -1832,6 +1832,7 @@ footer .footer-bottom .copyright {
 .social-links li a .logo-instagram g,
 .social-links li a .logo-behance g,
 .social-links li a .logo-linkedin path {
+  fill: #FBFDFE;
   -webkit-transition-property: fill;
   transition-property: fill;
   -webkit-transition-duration: 100ms;
@@ -1840,12 +1841,12 @@ footer .footer-bottom .copyright {
           transition-timing-function: cubic-bezier(0.12, 0, 0.39, 0);
 }
 
-/* line 19, src/sass/components/_social-links.scss */
+/* line 20, src/sass/components/_social-links.scss */
 .social-links li a:before {
   display: none;
 }
 
-/* line 23, src/sass/components/_social-links.scss */
+/* line 24, src/sass/components/_social-links.scss */
 .social-links li a:hover .logo-instagram g,
 .social-links li a:hover .logo-behance g,
 .social-links li a:hover .logo-linkedin path, .social-links li a:focus .logo-instagram g,
