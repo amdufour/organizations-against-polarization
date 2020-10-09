@@ -261,4 +261,27 @@ const handleClick = (d) => {
 /**********************************************/
 /* Pan and Zoom svg                           */
 /**********************************************/
-svgPanZoom('#network');
+// svgPanZoom('#network', {
+  // panEnabled: true,
+  // customEventsHandler: {
+  //   // Halt all touch events
+  //   haltEventListeners: ['touchstart', 'touchend', 'touchmove', 'touchleave', 'touchcancel']
+ 
+  //   // Init custom events handler
+  // , init: function(options) {
+  //     // Init Hammer
+  //     this.hammer = Hammer(options.svgElement)
+ 
+  //     // Handle double tap
+  //     this.hammer.on('doubletap', (e) => {
+  //       options.instance.zoomIn()
+  //       console.log(e.target);
+  //     })
+  //   }
+ 
+  //   // Destroy custom events handler
+  // , destroy: function(){
+  //     this.hammer.destroy()
+  //   }
+  // }
+// });

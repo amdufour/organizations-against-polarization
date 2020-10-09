@@ -66,9 +66,9 @@ d3.selectAll('g.node')
         hideInfo();
       })
       .on('click', d => {
-        if (window.innerWidth > 768) {
+        // if (window.innerWidth > 768) {
           handleClick(d);
-        }
+        // }
       });
 
 // Append legend
