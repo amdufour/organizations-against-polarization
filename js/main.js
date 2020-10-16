@@ -23,8 +23,10 @@ const grey = '#727A87';
 
 // Data related variables
 const groups = ['communications', 'civics', 'community', 'economy', 'technology', 'education'];
-const radiusMin = 8;  // Minimum radius of a node
-const radiusMax = 60; // Maximum radius of a node
+const radiusMin = 5;  // Minimum radius of a node (To account for missing data)
+const areaMin = Math.PI * Math.pow(radiusMin, 2); // Maximum area of  node
+const areaMax = 8000; // Maximum area of  node
+const radiusMax = Math.sqrt(areaMax / Math.PI); // Maximum radius of a node
 
 // State variable
 let isActiveElement = false;
@@ -37,13 +39,15 @@ let highlightedNodes = [];
 /*************************************/
 
 // Node radius scale
-const nodeRadiusScale = d3.scaleLinear()
-.domain(d3.extent(nodes, d => d.estimated_people_impacted))
-.range([radiusMin, radiusMax]);
+const nodeAreaScale = d3.scaleLinear()
+  .domain([0, d3.max(nodes, d => d.estimated_people_impacted)])
+  .range([areaMin, areaMax]);
 
 // Get radius of a node
 const getRadius = (peopleImpacted) => {
-return peopleImpacted == 'nan' ? 5 : nodeRadiusScale(peopleImpacted);
+  return peopleImpacted === 'nan' 
+    ? radiusMin 
+    : Math.sqrt(nodeAreaScale(peopleImpacted) / Math.PI);
 };
 
 // Append data to links and nodes
@@ -72,7 +76,7 @@ d3.selectAll('g.node')
       });
 
 // Append legend
-addRadiusLegend(getRadius(1000000), getRadius(500000), getRadius(5000));
+addRadiusLegend(getRadius(1000000), getRadius(100000), getRadius(10000));
 
 
 /*************************************/

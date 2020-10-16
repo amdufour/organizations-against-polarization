@@ -219,7 +219,10 @@ const showInfo = (d) => {
                   ? d.scale
                   : `${d.scale} (${d.location_of_impact})`;
   d3.select('#info .fact-scale').text(scale);
-  d3.select('#info .fact-impact').text(d3.format(",")(d.estimated_people_impacted));
+  const impact = d.estimated_people_impacted === 'nan'
+                  ? 'not available'
+                  : d3.format(",")(d.estimated_people_impacted);
+  d3.select('#info .fact-impact').text(impact);
   d3.select('#info .fact-url').attr('class', `fact fact-url link-${nodeColor.id}`);
   d3.select('#info .fact-url').attr('href', d.url);
   let url = d.url.replace('http://', '').replace('https://', '').replace('www.', '');
@@ -255,7 +258,7 @@ const handleClick = (d) => {
   if (window.innerWidth <= 768) {
     showInfo(d);
   }
-}
+};
 
 
 /**********************************************/
